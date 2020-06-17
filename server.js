@@ -11,6 +11,11 @@ app.use(express.static('src'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+app.get('/get',function(req,res){
+    let msg ='test'
+    return res.send(msg);
+})
+
 app.post('/send-email', function (req, res) {
     console.log('THIS WORKS');
 let transporter = nodeMailer.createTransport({
