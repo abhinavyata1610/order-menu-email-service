@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/send-email', function (req, res) {
+    console.log('THIS WORKS');
 let transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
